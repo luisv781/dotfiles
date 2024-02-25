@@ -23,7 +23,7 @@ client.connect_signal("request::titlebars", function(c)
 	end
 
 	awful
-		.titlebar(c, { position = "top", size = dpi(36), font = beautiful.font_name .. "Medium 10", bg = beautiful.transparent })
+		.titlebar(c, { position = "top", size = dpi(32), font = beautiful.font_name .. "Medium 10", bg = beautiful.transparent })
 		:setup({
 			{
 				layout = wibox.layout.align.horizontal,

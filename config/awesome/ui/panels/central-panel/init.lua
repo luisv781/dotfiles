@@ -14,8 +14,8 @@ return function(s)
 	--- Header
 	local function header()
 		local dashboard_text = wibox.widget({
-			markup = helpers.ui.colorize_text("Dashboard -", "#666c79"),
-			font = beautiful.font_name .. "Black 14",
+			markup = helpers.ui.colorize_text("Dashboard", "#9e8fc2"), --#666c79
+			font = beautiful.font_name .. "Bold 14",
 			valign = "center",
 			widget = wibox.widget.textbox,
 		})
@@ -141,7 +141,7 @@ return function(s)
 		visible = false,
 		placement = function(w)
 			awful.placement.top(w, {
-				margins = { top = beautiful.wibar_height + dpi(5),bottom =  dpi(5), left = dpi(5), right = dpi(5) },
+				margins = { top = beautiful.wibar_height + (beautiful.useless_gap * 3) + dpi(4),bottom =  dpi(5), left = dpi(5), right = dpi(5) },
 			})
 		end,
 		widget = {

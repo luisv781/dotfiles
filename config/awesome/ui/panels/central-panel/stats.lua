@@ -10,8 +10,8 @@ local icons = require("icons")
 --- Stats Widget
 --- ~~~~~~~~~~~~
 local stats_text = wibox.widget({
-	font = beautiful.font_name .. "Medium 10",
-	markup = helpers.ui.colorize_text("Stats", "#666c79"),
+	font = beautiful.font_name .. "Regular 10",
+	markup = helpers.ui.colorize_text("Stats", "#9e8fc2"),
 	valign = "center",
 	widget = wibox.widget.textbox,
 })
@@ -25,7 +25,7 @@ local stats_tooltip = wibox.widget({
 local tooltip_counter = 0
 local function create_tooltip(w)
 	local tooltip = wibox.widget({
-		font = beautiful.font_name .. "Medium 10",
+		font = beautiful.font_name .. "Bold 10",
 		align = "right",
 		valign = "center",
 		widget = wibox.widget.textbox,
@@ -86,8 +86,8 @@ local function cpu()
 		value = 50,
 		thickness = dpi(20),
 		rounded_edge = true,
-		bg = "#85afc3",
-		colors = { "#c1ebff" },
+		bg = "#9c85c3", --85afc3
+		colors = { "#d8c2ff" },
 		start_angle = math.pi + math.pi / 2,
 	})
 
@@ -122,8 +122,8 @@ local function temperature()
 		value = 50,
 		thickness = dpi(20),
 		rounded_edge = true,
-		bg = "#6791c3",
-		colors = { "#a3cdff" },
+		bg = "#8867c2",
+		colors = { "#c5a3ff" },
 		start_angle = math.pi + math.pi / 2,
 		cpu(),
 	})
@@ -179,8 +179,8 @@ local function ram()
 		value = 50,
 		thickness = dpi(20),
 		rounded_edge = true,
-		bg = "#4973ab",
-		colors = { "#85afe7" },
+		bg = "#6d49ab",
+		colors = { "#ab87e8" },
 		start_angle = math.pi + math.pi / 2,
 		temperature(),
 	})
@@ -216,8 +216,8 @@ local function hdd()
 		value = 50,
 		thickness = dpi(20),
 		rounded_edge = true,
-		bg = "#2b558d",
-		colors = { "#6791c9" },
+		bg = "#4e2a8c",
+		colors = { "#8b67c9" },
 		start_angle = math.pi + math.pi / 2,
 		ram(),
 	})

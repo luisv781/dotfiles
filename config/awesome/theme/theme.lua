@@ -17,8 +17,8 @@ local icons = require("icons")
 --- ░▀░░░▀▀▀░▀░▀░░▀░░▀▀▀
 
 --- Ui Fonts
-theme.font_name = "Roboto "
-theme.font = theme.font_name .. "Medium 10"
+theme.font_name = "AestheticIosevka " -- Roboto
+theme.font = theme.font_name .. "Bold Extended 12" -- Medium 10
 
 --- Icon Fonts
 theme.icon_font = "Material Icons "
@@ -30,11 +30,11 @@ theme.icon_font = "Material Icons "
 --- Special
 theme.white = "#edeff0"
 theme.darker_black = "#060809"
-theme.black = "#0c0e0f"
+theme.black = "#1c1b29" --#0c0e0f
 theme.lighter_black = "#121415"
 theme.one_bg = "#161819"
 theme.one_bg2 = "#1f2122"
-theme.one_bg3 = "#27292a"
+theme.one_bg3 = "#2d273d" -- #27292a
 theme.grey = "#343637"
 theme.grey_fg = "#3e4041"
 theme.grey_fg2 = "#484a4b"
@@ -44,7 +44,7 @@ theme.transparent = "#00000000"
 
 --- Black
 theme.color0 = "#232526"
-theme.color8 = "#2c2e2f"
+theme.color8 = "#2e2733" -- #2c2e2f
 
 --- Red
 theme.color1 = "#df5b61"
@@ -63,7 +63,7 @@ theme.color4 = "#6791c9"
 theme.color12 = "#709ad2"
 
 --- Magenta
-theme.color5 = "#bc83e3"
+theme.color5 = "#b374e3" -- #bc83e3
 theme.color13 = "#c58cec"
 
 --- Cyan
@@ -101,7 +101,7 @@ function theme.random_accent_color()
 	return accents[i]
 end
 
-theme.accent = theme.color4
+theme.accent = theme.color5 -- changed from color4 cuz yea
 
 --- UI events
 theme.leave_event = transparent
@@ -110,7 +110,7 @@ theme.press_event = "#ffffff" .. "15"
 theme.release_event = "#ffffff" .. "10"
 
 --- Widgets
-theme.widget_bg = "#1b1d1e"
+theme.widget_bg = "#221e2e" -- #1b1d1e
 
 --- Titlebars
 theme.titlebar_enabled = true
@@ -144,8 +144,8 @@ theme.titlebar_maximized_button_normal_inactive_hover = icon_dir .. "maximized_f
 theme.titlebar_maximized_button_focus_inactive_hover = icon_dir .. "maximized_focus_hover.svg"
 
 --- Wibar
-theme.wibar_bg = "#101213"
-theme.wibar_height = dpi(40)
+theme.wibar_bg = theme.black -- #1e1e2e | #101213
+theme.wibar_height = dpi(48)
 
 --- Music
 theme.music_bg = theme.black
@@ -156,11 +156,10 @@ theme.music_accent = theme.lighter_black
 --- ░█░█░░█░░░░█▀▀░█░░░█▀▀░█░█░█▀▀░█░█░░█░░▀▀█
 --- ░▀▀▀░▀▀▀░░░▀▀▀░▀▀▀░▀▀▀░▀░▀░▀▀▀░▀░▀░░▀░░▀▀▀
 
+
 --- Wallpapers
-theme.wallpaper = gears.surface.load_uncached(gfs.get_configuration_dir() .. "theme/assets/wave.png")
---- theme.wallpaper = gears.surface.load_uncached(gfs.get_configuration_dir() .. "theme/assets/yoru-dots.png")
---- theme.wallpaper = gears.surface.load_uncached(gfs.get_configuration_dir() .. "theme/assets/mountain.jpg")
---- theme.wallpaper = gears.surface.load_uncached(gfs.get_configuration_dir() .. "theme/assets/rocks.jpg")
+theme.wallpaper = gears.surface.load_uncached(gfs.get_configuration_dir() .. "theme/assets/wallpaper.jpg")
+
 
 --- Image Assets
 theme.pfp = gears.surface.load_uncached(gfs.get_configuration_dir() .. "theme/assets/pfp.png")
@@ -180,7 +179,7 @@ theme.layout_machi = icons.machi
 --- Icon Theme
 --- Define the icon theme for application icons. If not set then the icons
 --- from /usr/share/icons and /usr/share/icons/hicolor will be used.
-theme.icon_theme = "WhiteSur-dark"
+theme.icon_theme = "Crule-dark"
 
 --- Borders
 theme.border_width = 0
@@ -195,7 +194,7 @@ theme.border_color_maximized = theme.titlebar_bg
 theme.border_color_fullscreen = theme.titlebar_bg
 
 --- Corner Radius
-theme.border_radius = 12
+theme.border_radius = 16
 
 --- Edge snap
 theme.snap_bg = theme.color8
@@ -213,7 +212,7 @@ theme.tooltip_font = theme.font_name .. "Regular 10"
 theme.hotkeys_bg = theme.black
 theme.hotkeys_fg = theme.white
 theme.hotkeys_modifiers_fg = theme.white
-theme.hotkeys_font = theme.font_name .. "Medium 12"
+theme.hotkeys_font = theme.font_name .. "Bold 12"
 theme.hotkeys_description_font = theme.font_name .. "Regular 10"
 theme.hotkeys_shape = helpers.ui.rrect(theme.border_radius)
 theme.hotkeys_group_margin = dpi(50)
@@ -240,7 +239,7 @@ theme.layoutlist_shape_selected = helpers.ui.rrect(theme.border_radius)
 theme.layoutlist_bg_selected = theme.widget_bg
 
 --- Gaps
-theme.useless_gap = dpi(2)
+theme.useless_gap = dpi(6)
 
 --- Systray
 theme.systray_icon_size = dpi(20)
