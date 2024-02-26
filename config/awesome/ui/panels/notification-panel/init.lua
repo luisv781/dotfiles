@@ -36,7 +36,7 @@ return function(s)
 						widget = wibox.container.margin,
 					},
 					layout = wibox.layout.fixed.vertical,
-				},
+				},--[[
 				{ ----------- MIDDLE GROUP -----------
 					{
 						{
@@ -50,7 +50,7 @@ return function(s)
 					shape = helpers.ui.prrect(beautiful.border_radius * 2, true, false, false, false),
 					bg = beautiful.widget_bg,
 					widget = wibox.container.background,
-				},
+				},]]
 				layout = wibox.layout.flex.vertical,
 			},
 			shape = helpers.ui.prrect(beautiful.border_radius * 2, true, false, false, false),

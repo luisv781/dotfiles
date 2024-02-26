@@ -188,7 +188,7 @@ return function(s)
 	--- ~~~~~~~~~~~
 	local function notif_panel()
 		local icon = wibox.widget({
-			markup = helpers.ui.colorize_text("", beautiful.accent),
+			markup = helpers.ui.colorize_text("", "#c591db"),
 			align = "center",
 			valign = "center",
 			font = beautiful.icon_font .. "Round 18",
@@ -246,10 +246,13 @@ return function(s)
 		screen = s,
 		type = "dock",
 		maximum_height = beautiful.wibar_height,
-		minimum_width = s.geometry.width,
+		minimum_width = s.geometry.width - 128,
 		maximum_width = s.geometry.width,
 		placement = function(c)
-			awful.placement.top(c)
+			awful.placement.top(c, {margins = beautiful.useless_gap * 2})
+		end,
+		shape = function(c)
+			gears.shape.rounded_rect(c, s.geometry.width - 128, beautiful.wibar_height, 12)
 		end,
 		bg = beautiful.transparent,
 		widget = {

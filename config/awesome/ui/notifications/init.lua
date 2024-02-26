@@ -16,7 +16,7 @@ naughty.persistence_enabled = true
 naughty.config.defaults.ontop = true
 naughty.config.defaults.timeout = 6
 naughty.config.defaults.title = "System Notification"
-naughty.config.defaults.position = "top_right"
+naughty.config.defaults.position = "bottom_right"
 
 local function get_oldest_notification()
 	for _, notification in ipairs(naughty.active) do
@@ -232,7 +232,8 @@ naughty.connect_signal("request::display", function(n)
 		cursor = "hand2",
 		--- For antialiasing: The real shape is set in widget_template
 		shape = gears.shape.rectangle,
-		maximum_width = dpi(350),
+		maximum_width = dpi(360),
+		minimum_width = dpi(240),
 		maximum_height = dpi(180),
 		bg = "#00000000",
 		widget_template = {

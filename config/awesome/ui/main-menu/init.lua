@@ -12,29 +12,15 @@ local instance = nil
 local function awesome_menu()
 	return menu({
 		menu.button({
-			icon = { icon = "", font = "Material Icons Round " },
-			text = "Show Help",
-			on_press = function()
-				hotkeys_popup.show_help(nil, awful.screen.focused())
-			end,
-		}),
-		menu.button({
-			icon = { icon = "", font = "Material Icons Round " },
-			text = "Manual",
-			on_press = function()
-				awful.spawn(apps.default.terminal .. " -e man awesome")
-			end,
-		}),
-		menu.button({
 			icon = { icon = "", font = "Material Icons Round " },
 			text = "Edit Config",
 			on_press = function()
-				awful.spawn(apps.default.text_editor .. " " .. awesome.conffile)
+				awful.spawn("code " .. awesome.conffile)
 			end,
 		}),
 		menu.button({
 			icon = { icon = "", font = "Material Icons Round " },
-			text = "Restart",
+			text = "Reload",
 			on_press = function()
 				awesome.restart()
 			end,
@@ -83,7 +69,7 @@ local function widget()
 			icon = { icon = "", font = "Material Icons Round " },
 			text = "Text Editor",
 			on_press = function()
-				awful.spawn(apps.default.code_editor, false)
+				awful.spawn(apps.default.text_editor, false)
 			end,
 		}),
 		menu.button({

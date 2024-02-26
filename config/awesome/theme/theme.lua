@@ -162,7 +162,7 @@ theme.wallpaper = gears.surface.load_uncached(gfs.get_configuration_dir() .. "th
 
 
 --- Image Assets
-theme.pfp = gears.surface.load_uncached(gfs.get_configuration_dir() .. "theme/assets/pfp.png")
+theme.pfp = gears.surface.load_uncached(gfs.get_configuration_dir() .. "theme/assets/drkim.jpg")
 theme.music = gears.surface.load_uncached(gfs.get_configuration_dir() .. "theme/assets/music.png")
 
 --- Layout

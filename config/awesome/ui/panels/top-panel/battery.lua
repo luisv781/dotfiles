@@ -15,7 +15,7 @@ return function()
 	local happy_color = beautiful.color2
 	local sad_color = beautiful.color1
 	local ok_color = beautiful.color3
-	local charging_color = beautiful.color6
+	local charging_color = "#c591db"
 
 	local charging_icon = wibox.widget({
 		markup = helpers.ui.colorize_text("", beautiful.white),
@@ -28,12 +28,12 @@ return function()
 	local battery_bar = wibox.widget({
 		max_value = 100,
 		value = 50,
-		forced_width = dpi(30),
-		border_width = dpi(1),
+		forced_width = dpi(36),
+		border_width = dpi(2),
 		paddings = dpi(2),
 		bar_shape = helpers.ui.rrect(2),
 		shape = helpers.ui.rrect(5),
-		color = beautiful.white,
+		color = beautiful.color2,
 		background_color = beautiful.transparent,
 		border_color = beautiful.white,
 		widget = wibox.widget.progressbar,
@@ -63,13 +63,13 @@ return function()
 			spacing = dpi(-1.6),
 		},
 		layout = wibox.layout.fixed.horizontal,
-		spacing = dpi(1),
+		spacing = dpi(2),
 	})
 
 	local battery_percentage_text = wibox.widget({
 		id = "percent_text",
-		text = "50%",
-		font = beautiful.font_name .. "Medium 12",
+		text = "69%",
+		font = beautiful.font_name .. "Regular 12",
 		align = "center",
 		valign = "center",
 		widget = wibox.widget.textbox,
@@ -80,8 +80,8 @@ return function()
 		spacing = dpi(5),
 		{
 			battery,
-			top = dpi(1),
-			bottom = dpi(1),
+			top = dpi(2),
+			bottom = dpi(2),
 			widget = wibox.container.margin,
 		},
 		battery_percentage_text,
