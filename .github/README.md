@@ -1,20 +1,3 @@
-<!-- YORU BANNER -->
-<div align="center">
-   <a href="#--------">
-      <img src="assets/yoru-banner.png" alt="Home Preview">
-   </a>
-</div>
-
-<p align="center">
-<a href="#wrench--setup"><img width="150px" style="padding: 0 10px;" src="assets/button-setup.png"></a>
-<a href="https://github.com/rxyhn/yoru/wiki"><img width="150px" style="padding: 0 10px;" src="assets/button-wiki.png"></a>
-<a href="#ocean--gallery"><img width="150px" style="padding: 0 10px;" src="assets/button-gallery.png"></a>
-<a href="#money_with_wings--tip-jar"><img width="150px" style="padding: 0 10px;" src="assets/button-tipjar.png"></a>
-</p>
-
-<br>
-
-<!-- RICE PREVIEW -->
 <div align="center">
    <a href="#--------">
       <img src="assets/yoru.png" alt="Rice Preview">
